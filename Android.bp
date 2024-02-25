@@ -1,3 +1,9 @@
+soong_namespace {
+    imports:[
+        "hardware/samsung_slsi-linaro/exynos",
+        "hardware/samsung_slsi-linaro/graphics"
+    ],
+}
 hidl_package_root {
     name: "vendor.samsung_slsi.hardware.epic",
     path: "hardware/samsung_slsi-linaro/interfaces/epic",
