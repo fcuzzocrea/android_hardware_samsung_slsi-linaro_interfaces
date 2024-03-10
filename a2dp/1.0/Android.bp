@@ -1,0 +1,15 @@
+cc_library_shared {
+    name: "android.hardware.bluetooth.a2dp@1.0-impl-exynos",
+    relative_install_path: "hw",
+    vendor: true,
+    srcs: [
+        "BluetoothAudioOffload.cpp",
+    ],
+    shared_libs: [
+        "libhidlbase",
+        "libutils",
+        "liblog",
+        "vendor.samsung_slsi.hardware.ExynosA2DPOffload@2.0",
+        "android.hardware.bluetooth.a2dp@1.0",
+    ],
+}
