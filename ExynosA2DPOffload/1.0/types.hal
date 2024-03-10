@@ -1,0 +1,44 @@
+/*
+ * Copyright (C) 2018 The Android Open Source Project
+ *
+ * Licensed under the Apache License, Version 2.0 (the "License");
+ * you may not use this file except in compliance with the License.
+ * You may obtain a copy of the License at
+ *
+ *      http://www.apache.org/licenses/LICENSE-2.0
+ *
+ * Unless required by applicable law or agreed to in writing, software
+ * distributed under the License is distributed on an "AS IS" BASIS,
+ * WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+ * See the License for the specific language governing permissions and
+ * limitations under the License.
+ */
+
+package vendor.samsung_slsi.hardware.ExynosA2DPOffload@1.0;
+
+/**
+ * BT A2DP Host Return Status
+ */
+enum Status : uint8_t {
+    /** operation is success */
+    SUCCESS,
+    /** operation is failure */
+    FAILURE,
+    /** reserved enum */
+    RESERVED_2,
+    RESERVED_3,
+    /** operation is pending */
+    PENDING,
+};
+
+/**
+ * BT A2DP CODEC Configurations
+ *
+ * Codec Infos are transmitted as a vector of type uint8_t.
+ */
+typedef vec<uint8_t> CodecInfo;
+
+/**
+ * BT A2DP Data
+ */
+typedef vec<uint8_t> A2DPData;

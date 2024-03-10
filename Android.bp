@@ -10,6 +10,11 @@ hidl_package_root {
 }
 
 hidl_package_root {
+    name: "vendor.samsung_slsi.hardware.ExynosA2DPOffload",
+    path: "hardware/samsung_slsi-linaro/interfaces/ExynosA2DPOffload",
+}
+
+hidl_package_root {
     name: "vendor.samsung_slsi.hardware.SbwcDecompService",
     path: "hardware/samsung_slsi-linaro/interfaces/SbwcDecompService",
 }

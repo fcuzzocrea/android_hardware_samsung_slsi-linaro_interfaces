@@ -1,0 +1,41 @@
+/*
+ * Copyright (C) 2019 The Android Open Source Project
+ *
+ * Licensed under the Apache License, Version 2.0 (the "License");
+ * you may not use this file except in compliance with the License.
+ * You may obtain a copy of the License at
+ *
+ *      http://www.apache.org/licenses/LICENSE-2.0
+ *
+ * Unless required by applicable law or agreed to in writing, software
+ * distributed under the License is distributed on an "AS IS" BASIS,
+ * WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+ * See the License for the specific language governing permissions and
+ * limitations under the License.
+ */
+
+package vendor.samsung_slsi.hardware.ExynosA2DPOffload@2.0;
+
+import android.hardware.bluetooth.a2dp@1.0;
+
+interface IExynosA2DPOffload {
+
+    /* The interfaces for BT Host */
+    session_start(IBluetoothAudioHost hostIf, CodecConfiguration codecConfig) generates (Status status);
+    oneway a2dp_start_ack(Status status);
+    oneway a2dp_suspend_ack(Status status);
+    oneway a2dp_stop_ack(int32_t status);
+    oneway a2dp_codec_config_ack(Status status, CodecInfo codec_info);
+    oneway a2dp_send_datas_to_audio(DYN_Param data);
+    oneway close();
+
+    /* The interfaces for AudioHAL */
+    a2dp_open_stream() generates (int32_t ret);
+    a2dp_close_stream() generates (int32_t ret);
+    a2dp_start_stream() generates (int32_t ret);
+    a2dp_stop_stream() generates (int32_t ret);
+    a2dp_suspend_stream() generates (int32_t ret);
+    a2dp_get_codec_config(memory codec_info) generates (int32_t ret);
+    a2dp_clear_suspend_flag() generates (int32_t ret);
+    a2dp_check_ready() generates (int32_t ret);
+};

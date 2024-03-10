@@ -1,0 +1,4 @@
+service ExynosA2DPOffload /vendor/bin/hw/vendor.samsung_slsi.hardware.ExynosA2DPOffload@1.0-service
+    class hal
+    user system
+    group audio
