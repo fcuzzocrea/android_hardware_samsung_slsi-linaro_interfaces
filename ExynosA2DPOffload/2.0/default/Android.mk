@@ -47,7 +47,9 @@ LOCAL_SHARED_LIBRARIES += libaudioproxy
 ifneq ($(filter exynos9825 ,$(TARGET_SOC)),)
 LOCAL_C_INCLUDES := $(TOP)/device/samsung/universal9820/audio/proxy
 else
-LOCAL_C_INCLUDES := $(TOP)/device/samsung/$(TARGET_DEVICE_NAME)/audio/proxy
+LOCAL_C_INCLUDES := $(TOP)/device/samsung/$(TARGET_DEVICE_NAME)/audio/proxy \
+                    $(COMMON_PATH)/audio/proxy \
+                    $(BOARD_AUDIO_PROXY_PATH)
 endif
 endif
 
